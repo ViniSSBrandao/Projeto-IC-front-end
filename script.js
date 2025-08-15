@@ -1,5 +1,5 @@
 // --- CONFIGURAÇÃO ---
-const arduinoIP = 'http://localhost:3000'; // MANTENHA O IP DO SEU ARDUINO/ESP
+const arduinoIP = 'http://172.22.66.33'; // MANTENHA O IP DO SEU ARDUINO/ESP
 const plants = ['Planta 1'];
 const updateInterval = 5000; // 5 segundos
 
