@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Arduino e Plantas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-content">
+            <button id="popup-close" class="popup-close-btn">×</button>
+            <div id="popup-data">Dados da Planta (LLM)</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Controle Arduino e Plantas</h1>
+        
+        <div class="control-panel">
+            <div class="control-item">
+                <h3 id="plant1-name">Planta 1: Carregando...</h3>
+                <p id="plant1-ideal-humidity">Umidade do solo Ideal: Carregando...</p>
+                <p id="plant1-current-humidity">Umidade do solo Atual: Carregando...</p>
+                <p id="plant1-irrigation-type">Tipo de irrigação: Carregando...</p>
+                <p id="plant1-time-to-irrigation">Tempo estimado: Carregando...</p>
+                <div class="controle-umidade">
+                    <button onclick="toggleLED('Planta 1')">Regar Planta 1</button>
+                    <button onclick="toggleUVLED('Planta 1')">Ligar/Desligar LED UV</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown-container">
+            <div class="dropdown-menu">
+                <button class="dropdown-button">Trocar o tipo de planta</button>
+                <div class="dropdown-content">
+                    <button onclick="showPlantNameInput('Planta 1')">Planta 1</button>
+                </div>
+            </div>
+            <div id="plant-name-container" class="plant-name-container">
+                <input id="plant-name-input" type="text" placeholder="Nome da planta">
+                <button onclick="submitPlantName()">Enviar</button>
+            </div>
+        </div>
+
+        <div id="response" class="response-box"></div>
+    </div>
+
+    <div class="informacao">
+        <div class="caixa-informacao caixa-reservatorio">
+            <p id="reservatorio-nivel">Nível do reservatório: Carregando...</p>
+            <p id="bomba-status">Status da bomba: Carregando...</p>
+        </div>
+        <div class="caixa-informacao">
+            <p id="luminosidade">Luminosidade: Carregando...</p>
+            <p id="luminosidade-ideal">Luminosidade Ideal: Carregando...</p>
+            <p id="luminosidade-status">Status da Luminosidade: Carregando...</p>
+            <p id="uv-led-status">Status do LED UV: Carregando...</p>
+        </div>
+        <div class="caixa-informacao">
+            <p id="temperatura">Temperatura: Carregando...</p>
+            <p id="umidade-atmosferica">Umidade atmosférica: Carregando...</p>
+            <p id="plant1-suitable-to-water">Planta 1 - Adequado para regar: Carregando...</p>
+        </div>
+    </div>
+</body>
+</html>
